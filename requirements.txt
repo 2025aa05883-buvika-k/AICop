@@ -1,0 +1,14 @@
+streamlit
+fastapi
+uvicorn[standard]
+langchain
+langgraph
+langchain-community
+langchain-core
+ollama
+pydantic
+python-dotenv
+reportlab
+pandas
+requests
+typing-extensions
