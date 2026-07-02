@@ -10,5 +10,6 @@ pydantic
 python-dotenv
 reportlab
 pandas
+plotly
 requests
 typing-extensions

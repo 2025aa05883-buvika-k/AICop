@@ -1,5 +1,6 @@
 from fastapi.testclient import TestClient
 
+from agents.base import BaseAgent
 from backend.api import app
 
 
@@ -50,3 +51,22 @@ def test_case_routes_and_backward_compatibility() -> None:
     report_response = client.get(f"/cases/{case_id}/report")
     assert report_response.status_code == 200
     assert report_response.json()["case_id"] == case_id
+
+
+def test_agent_logging_uses_safe_extra_fields() -> None:
+    class DummyState:
+        def __init__(self) -> None:
+            self.case_id = "dummy-case"
+            self.logs: list[str] = []
+
+    class DummyAgent(BaseAgent):
+        def run(self, state):
+            return state
+
+    state = DummyState()
+    agent = DummyAgent("dummy_agent")
+
+    agent.log(state, "hello from agent")
+
+    assert len(state.logs) == 1
+    assert "dummy_agent" in state.logs[0]

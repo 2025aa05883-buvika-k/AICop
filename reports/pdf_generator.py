@@ -10,7 +10,7 @@ from backend.config import settings
 
 class PDFReportGenerator:
     def __init__(self, output_dir: str | None = None) -> None:
-        self.output_dir = Path(output_dir or settings.reports_dir)
+        self.output_dir = Path(output_dir or settings.reports_path)
         self.output_dir.mkdir(parents=True, exist_ok=True)
 
     def generate(self, case_id: str, content: str) -> str:
