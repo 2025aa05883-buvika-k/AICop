@@ -20,7 +20,7 @@ The GR4ML models define the system requirements using:
 
 `architecture/gr4ml.png`
 
-![GR4ML Requirement Models](architecture/Architecture AICop.png)
+![GR4ML Requirement Models](architecture/GR4ML_AICop.png)
 
 **Interactive Canva:**  
 https://canva.link/pxp1kstojwci9du
@@ -41,7 +41,7 @@ The architecture demonstrates:
 
 `architecture/architecture.png`
 
-![System Architecture](architecture/Architecture AICop.png)
+![System Architecture](architecture/Architecture_AICop.png)
 
 **Interactive Canva:**  
 https://canva.link/7prpyi6xpcjexpe
